@@ -1,0 +1,17 @@
+version: "3"
+
+# docker build -t "scummvm/scummvm-rpi:latest" -f "./Dockerfile" .
+
+services:
+  raspberrypi:
+    image: scummvm/scummvm-rpi:latest
+    environment:
+      CCACHE_DIR: /data/ccache/rpi
+    volumes:
+      - ccache:/data/ccache
+      - repository:/data/sharedrepo
+
+volumes:
+  ccache:
+  repository:
+
