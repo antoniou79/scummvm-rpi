@@ -1,7 +1,9 @@
 # scummvm-rpi
-Docker Image configuration for building the Raspberry PI port for ScummVM. Please note that Raspberry Pi versions 1 and Zero are not currently supported by this configuration. It should work with Pi 2/3/4, and was tested successfully on a Raspberry Pi 3B running Raspbian 3.2 (January 2020).
+Docker Image configuration for building the Raspberry PI port for ScummVM. Please note that Raspberry Pi versions 1 and Zero are not currently supported by this configuration. The standard Debian toolchain for armhf used here targets ARMv7 and above, while the Pi 1 and Pi 0 are using the ARMv6 architecture. 
 
-Based on the work of Colin Snover (csnover) and Le Philousophe (lephilousophe).
+It should work with Pi 2/3/4 and was tested successfully on a Raspberry Pi 3B running Raspbian 3.2 (January 2020).
+
+This project is based on the work of Colin Snover (csnover) and Le Philousophe (lephilousophe).
 
 This set up *does not* use the official toolchain which is provided by RaspberryPi team at their github (https://github.com/raspberrypi/tools.git). This is due to the fact that the official toolchain as of yet uses an old gcc version (4.9.3) which results in certain issues. Specifically, it won't be possible for ScummVM to compile with support for the current Fluidsynth developer package and the final build may have issues with memory management (eg. reporting free() calls on invalid pointers).
 
