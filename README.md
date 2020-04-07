@@ -65,6 +65,7 @@ make -j$(nproc)
 
 TODO:
 - Test adding support for updated versions of the third party libraries (cross-compiled from source using scripts during the first phase of the Docker image)
+- Ensure that the output binary will be created in a folder with other distribution related files (README, themes, translations.dat, engine related addons etc).
 
 Reference links:
 - Scummvm repository: https://github.com/scummvm/scummvm
